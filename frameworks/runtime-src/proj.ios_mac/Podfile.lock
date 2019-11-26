@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Flutter (1.0.0)
+  - Flutter (1.9.0)
   - FlutterPluginRegistrant (0.0.1):
     - Flutter
   - IAPHelper (1.1)
@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: f41a1cacdff755a043b9ec3d8f649d0101107166
   FlutterPluginRegistrant: d59dd07dd90e9c6430996073575a5bd1ea19677e
   IAPHelper: fd74f53b0ac142eed085777b88b86a11746a2dd4
   my_flutter: c0ca42721b3297bc8d54e93782ac00730d3bd1a1
