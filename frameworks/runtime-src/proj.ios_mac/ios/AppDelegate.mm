@@ -29,27 +29,36 @@
 #import "GameAppDelegate.h"
 #import "RootViewController.h"
 #import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h> // Only if you have Flutter Plugins
-@implementation AppDelegate
 
-@synthesize window;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
+@interface AppDelegate (){
+
+//    AppViewController *controller;
+}
+@property (nonatomic, assign) CFTimeInterval startTime;
+@end
+
 // cocos2d application instance
 static GameAppDelegate s_sharedApplication;
+@implementation AppDelegate
+
+@synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //
+    int i = 0 ;
     self.flutterEngine = [[FlutterEngine alloc] initWithName:@"io.flutter" project:nil];
     [self.flutterEngine runWithEntrypoint:nil];
     [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
-//    cocos2d::Application *app = cocos2d::Application::getInstance();
-//    
-//    // Initialize the GLView attributes
-//    app->initGLContextAttrs();
-//    cocos2d::GLViewImpl::convertAttrs();
+/*    cocos2d::Application *app = cocos2d::Application::getInstance();
+    
+    // Initialize the GLView attributes
+    app->initGLContextAttrs();
+    cocos2d::GLViewImpl::convertAttrs();
     
     // Override point for customization after application launch.
 
@@ -77,12 +86,12 @@ static GameAppDelegate s_sharedApplication;
 
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
-//    // IMPORTANT: Setting the GLView should be done after creating the RootViewController
-//    cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);
-//    cocos2d::Director::getInstance()->setOpenGLView(glview);
-//
-//    //run the cocos2d-x game scene
-//    app->run();
+    // IMPORTANT: Setting the GLView should be done after creating the RootViewController
+    cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);
+    cocos2d::Director::getInstance()->setOpenGLView(glview);
+
+    //run the cocos2d-x game scene
+    app->run(); */
 
     return YES;
 }
@@ -142,7 +151,7 @@ static GameAppDelegate s_sharedApplication;
 #else
 - (void)dealloc {
     [window release];
-    [_viewController release];
+//    [_viewController release];
     [super dealloc];
 }
 #endif
